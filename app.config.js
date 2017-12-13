@@ -22,7 +22,13 @@ angular.module('myapp')
         $stateProvider.state({
             name: 'details',
             url: '/productdetails/{productId}',
-            component: 'productdetails'
+            component: 'productdetails',
+            resolve: {
+                product: function(ProductService, $transition$){
+                    var currentProductId = $transition$.params().productId;
+                    return ProductService.getProductById(currentProductId);
+                }
+            }
         });
 
         $stateProvider.state({
