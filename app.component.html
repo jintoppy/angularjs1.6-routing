@@ -1,18 +1,19 @@
 <div id="header">
     <ul>
         <li>
-            <a href="#">Home</a>
+            <a ui-sref="home">Home</a>
         </li>
         <li>
-            <a href="#">About</a>
+            <a ui-sref="about">About</a>
         </li>
         <li>
-            <a href="#">Contact</a>
+            <a ui-sref="contactus">Contact</a>
+        </li>
+        <li>
+            <a ui-sref="products">Products</a>
         </li>
     </ul>
 </div>
 <div id="content-area">
-    <home></home>    
-    <about></about>    
-    <contact></contact>    
+    <ui-view></ui-view>
 </div>
